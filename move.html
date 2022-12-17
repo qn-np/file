@@ -1,0 +1,79 @@
+<head>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+  
+<a-scene>
+  
+<a-icosahedron color="#deb887" position="3 0 -5"
+
+animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing: linear" 
+               animation__2="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1000; loop: true; dir: alternate"
+               
+                animation__3="property: object3D.position.y;
+             to: 1000;
+             dir: alternate;
+             dur: 3500;
+             loop: true">
+</a-icosahedron>
+ 
+
+
+<a-entity>
+
+<a-dodecahedron color="#deb887" position="0 0 -5"
+                   animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing: linear"
+                      
+animation__2="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1000; loop: true; dir: alternate"
+                
+                animation__3="property: object3D.position.y;
+             to: 1000;
+             dir: alternate;
+             dur: 2500;
+             loop: true"
+></a-dodecahedron>
+      
+<a-octahedron color="#deb887" position="-3 0 -5"
+              
+animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 3000; easing: linear"
+                      
+animation__2="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1000; loop: true; dir: alternate"
+
+ animation__3="property: object3D.position.y;
+             to: 1000;
+             dir: alternate;
+             dur: 1500;
+             loop: true"              
+              ></a-octahedron>      
+   <a-gltf-model id="girl" src="https://github.com/qn-np/file/blob/485c688dcd10dcef4737329da6c0cd1a8f4a5a1e/Wave-Dance.glb" position="0 0 -5"
+
+animetion__4="property: object3D.position.x;
+             to: 5;
+             dir: alternate;
+             dur: 1000;
+             loop: true"                 
+                 ></a-gltf-model>
+   <a-marker>
+      <a-entity gltf-model="#girl" animation-mixer></a-entity>
+    </a-marker>
+  
+  
+  
+      
+  <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"> 
+</a-entity>
+      
+      
+  
+  <a-sky color="#ffffff" src="https://images.unsplash.com/photo-1596263576925-d90d63691097?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3122&q=80"></a-sky>
+  
+  <a-camera></a-camera>
+
+  </a-scene>
+</body>
